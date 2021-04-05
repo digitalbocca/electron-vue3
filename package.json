@@ -1,0 +1,29 @@
+{
+  "name": "electron-vue3",
+  "version": "1.0.0",
+  "description": "Comece com Electron e Vue 3+",
+  "scripts": {
+    "cleanCache": "rm -rf ./.parcel-cache",
+    "cleanDist": "rm -rf ./dist",
+    "cleanAll": "npm run cleanCache && npm run cleanDist",
+    "frontendBuild": "parcel build ./src/index.pug --public-url ./ --no-source-maps --dist-dir './dist' --no-scope-hoist",
+    "prestart": "npm run cleanAll && npm run frontendBuild",
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "Gabriel Bertola Bocca - gabriel at estudiodigitalbocca.com.br",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-pug": "^2.0.0-beta.2",
+    "@parcel/transformer-sass": "^2.0.0-beta.2",
+    "@parcel/transformer-vue": "^2.0.0-beta.2",
+    "electron": "^12.0.2",
+    "parcel": "^2.0.0-beta.2",
+    "standard": "^16.0.3"
+  },
+  "dependencies": {
+    "vue": "^3.0.11",
+    "vue-router": "^4.0.5",
+    "vuex": "^4.0.0"
+  }
+}
