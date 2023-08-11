@@ -2,28 +2,27 @@
   "name": "electron-vue3",
   "version": "1.0.0",
   "description": "Comece com Electron e Vue 3+",
+  "type": "module",
+  "main": "index.cjs",
   "scripts": {
-    "cleanCache": "rm -rf ./.parcel-cache",
-    "cleanDist": "rm -rf ./dist",
-    "cleanAll": "npm run cleanCache && npm run cleanDist",
-    "frontendBuild": "parcel build ./src/index.pug --public-url ./ --no-source-maps --dist-dir './dist' --no-scope-hoist",
-    "prestart": "npm run cleanAll && npm run frontendBuild",
+    "clean-dist": "rm -rf ./dist",
+    "front-build": "vite build",
+    "prestart": "npm run clean-dist && npm run front-build",
     "start": "electron ."
   },
   "keywords": [],
   "author": "Gabriel Bertola Bocca - gabriel at estudiodigitalbocca.com.br",
   "license": "ISC",
   "devDependencies": {
-    "@parcel/transformer-pug": "^2.0.0-beta.2",
-    "@parcel/transformer-sass": "^2.0.0-beta.2",
-    "@parcel/transformer-vue": "^2.0.0-beta.2",
-    "electron": "^12.0.2",
-    "parcel": "^2.0.0-beta.2",
-    "standard": "^16.0.3"
+    "@vitejs/plugin-vue": "^4.2.3",
+    "electron": "^25.5.0",
+    "pug": "^3.0.2",
+    "sass": "^1.65.1",
+    "vite": "^4.4.9"
   },
   "dependencies": {
-    "vue": "^3.0.11",
-    "vue-router": "^4.0.5",
-    "vuex": "^4.0.0"
+    "pinia": "^2.1.6",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4"
   }
 }

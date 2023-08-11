@@ -1,11 +1,11 @@
-'use strict'
-
 import { createApp } from 'vue'
 
-import App from './components/app'
+import App from '@/components/app.vue'
 
-import router from './router'
-import store from './store'
+import router from '@/router'
+import store from '@/stores'
+
+import '@/sass/styles.sass'
 
 const app = createApp(App)
 

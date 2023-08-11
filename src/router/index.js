@@ -1,8 +1,6 @@
-'use strict'
-
 import { createRouter, createWebHashHistory } from 'vue-router'
 
-import Home from './../views/home'
+import Home from '@/views/home.vue'
 
 export default createRouter({
   history: createWebHashHistory(),
